@@ -1,0 +1,135 @@
+:root {
+  --main-color: #8d24f0;
+  --second-color: #1957fc;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px;
+  background-color: var(--main-color);
+}
+
+*,
+*::before,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*styles*/
+
+#main {
+  @include flex();
+  flex-direction: column;
+  width: 80%;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  background-color: #fff;
+
+  * {
+    margin: 0.25rem;
+  }
+
+  span {
+    font-size: calc(2rem + 0.25vw);
+    font-weight: bold;
+  }
+}
+
+.inputs {
+  @include flex();
+  justify-content: center;
+  width: 100%;
+
+  input[type="text"] {
+    width: 70%;
+    padding: 0.25rem;
+    font-size: calc(0.75rem + 1.5vw);
+  }
+
+  input[type="submit"] {
+    width: auto;
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 0.5rem;
+    font-size: calc(0.75rem + 1.5vw);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.activitys {
+  width: 100%;
+  padding-top: 2rem;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.error {
+  width: 100%;
+  color: #b13737;
+  text-align: center;
+  text-decoration: underline;
+  animation: display 0.4s ease-in;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.task-section {
+  @include flex();
+  font-size: 1.5rem;
+
+  #btn {
+    background-color: var(--main-color);
+    padding: 0.25rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+// .activitys{
+
+// }

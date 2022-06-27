@@ -1,0 +1,234 @@
+:root {
+  --spartan: "League Spartan", sans-serif;
+  --main-bgc-1: rgb(58, 71, 100);
+  --second-bgc-1: rgb(35, 44, 67);
+  --third-bgc-1: hsl(224, 36%, 15%);
+  --blue-btn-esp: rgb(99, 112, 151);
+  --darkblue-btn-esp: rgb(64, 78, 114);
+  --red-btn-esp: rgb(208, 63, 47);
+  --darkred-btn-esp: rgb(147, 38, 26);
+  --white-text: rgb(255, 255, 255);
+  --gray-text: rgb(68, 75, 90);
+  --main-bgc-2: rgb(211, 211, 211);
+  --second-bgc-2: rgb(189, 189, 189);
+  --third-bgc-2: rgb(237, 237, 237);
+  --cyan: rgb(55, 127, 134);
+  --darkcyan: rgb(27, 95, 101);
+  --orange: rgb(136, 58, 1);
+  --darkorange: rgb(112, 48, 3);
+  --yellow: rgb(229, 228, 225);
+  --darkyellow: rgb(166, 157, 145);
+  --gray-text-2: rgb(53, 53, 44);
+  --main-bgc-3: rgb(22, 6, 40);
+  --second-bgc-3: rgb(55, 28, 87);
+  --violet: rgb(60, 6, 83);
+  --magenta: rgb(188, 21, 244);
+  --cyan-2: rgb(0, 224, 209);
+  --cyan-3: rgb(108, 249, 242);
+  --darkviolet: rgb(48, 18, 82);
+  --darkmagenta: rgb(135, 28, 156);
+  --lightyellow: rgb(255, 229, 61);
+  --darkblue: rgb(27, 36, 40);
+}
+
+/*normalice*/
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 32px;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  background-color: var(--main-bgc-1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--spartan);
+}
+
+/*---------------- components ---------------------*/
+/*---------------- utilitys ---------------------*/
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*---------------- style site ---------------------*/
+header {
+  color: var(--white-text);
+}
+
+label {
+  display: grid;
+  grid-template-columns: repeat(60% 40%);
+  column-gap: 10px;
+}
+
+.number-theme {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.5rem;
+  grid-column: 2/3;
+}
+
+.inputs {
+  background-color: var(--second-bgc-1);
+  border-radius: 15px;
+  padding: 0 0.25rem;
+}
+.inputs input:checked {
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+  background: red;
+}
+
+.calculator {
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--third-bgc-1);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: var(--white-text);
+}
+
+input[type=number] {
+  text-align: right;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: var(--third-bgc-1);
+  border: none;
+  color: var(--white-text);
+}
+input[type=number]:focus {
+  border-radius: 10px;
+  outline: thin solid var(--white-text);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 22.5%);
+  justify-content: space-between;
+  row-gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--second-bgc-1);
+  border-radius: 10px;
+}
+.keyboard button {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 5px var(--gray-text);
+}
+.keyboard button:nth-child(4) {
+  background-color: var(--blue-btn-esp);
+  box-shadow: 2px 5px var(--darkblue-btn-esp);
+  color: var(--white-text);
+}
+.keyboard button:nth-child(17) {
+  grid-column: span 2;
+  background-color: var(--blue-btn-esp);
+  box-shadow: 2px 5px var(--darkblue-btn-esp);
+  color: var(--white-text);
+}
+.keyboard button:nth-child(18) {
+  grid-column: span 2;
+  background-color: var(--red-btn-esp);
+  box-shadow: 2px 5px var(--darkred-btn-esp);
+  color: var(--white-text);
+}
+
+/*----------themes--------------------*/
+header.theme-2 {
+  color: var(--gray-text);
+}
+
+body.theme-2 {
+  background-color: var(--main-bgc-2);
+}
+
+.results.theme-2 {
+  background-color: var(--third-bgc-2);
+}
+.results.theme-2 input {
+  color: var(--gray-text-2);
+  background-color: inherit;
+}
+
+.keyboard.theme-2 {
+  background-color: var(--second-bgc-2);
+}
+.keyboard.theme-2 button:nth-child(4) {
+  background-color: var(--cyan);
+  box-shadow: 2px 5px var(--darkcyan);
+}
+.keyboard.theme-2 button:nth-child(17) {
+  background-color: var(--cyan);
+  box-shadow: 2px 5px var(--darkcyan);
+}
+.keyboard.theme-2 button:nth-child(18) {
+  background-color: var(--orange);
+  box-shadow: 2px 5px var(--darkorange);
+}
+
+header.theme-3 {
+  color: var(--lightyellow);
+}
+
+body.theme-3 {
+  background-color: var(--main-bgc-3);
+}
+
+.results.theme-3 {
+  background-color: var(--second-bgc-3);
+}
+.results.theme-3 input {
+  color: var(--lightyellow);
+  background-color: inherit;
+}
+
+.keyboard.theme-3 {
+  background-color: var(--second-bgc-3);
+}
+.keyboard.theme-3 button {
+  color: var(--lightyellow);
+  background-color: var(--darkviolet);
+  box-shadow: 2px 5px var(--darkmagenta);
+}
+.keyboard.theme-3 button:nth-child(4) {
+  background-color: var(--violet);
+  box-shadow: 2px 5px var(--magenta);
+}
+.keyboard.theme-3 button:nth-child(17) {
+  background-color: var(--violet);
+  box-shadow: 2px 5px var(--magenta);
+}
+.keyboard.theme-3 button:nth-child(18) {
+  color: #000;
+  background-color: var(--cyan-2);
+  box-shadow: 2px 5px var(--cyan-3);
+}
+
+/*# sourceMappingURL=styles.css.map */

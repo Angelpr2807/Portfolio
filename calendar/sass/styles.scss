@@ -1,0 +1,115 @@
+:root {
+  --main-color: rgb(255, 161, 161);
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: var(--main-color);
+}
+
+*,
+*::before,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--epilogue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* site styles */
+
+.calendar-container {
+  @include flex();
+  flex-direction: column;
+  min-width: 280px;
+  width: 40vw;
+  margin: 1rem auto;
+  background-color: #fff;
+}
+
+form {
+  @include flex();
+  flex-direction: column;
+  width: 80%;
+  margin: 1rem 0;
+
+  * {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border: thin solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  input[type="submit"] {
+    background-color: rgb(80, 115, 230);
+    color: #fff;
+  }
+}
+
+/* event card */
+
+main {
+  min-width: 280px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.event-card {
+  @include flex();
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: thin solid #000;
+  border-radius: 5px;
+
+  button {
+    font-size: 1rem;
+    background-color: rgb(250, 35, 35);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  p span:first-child {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
