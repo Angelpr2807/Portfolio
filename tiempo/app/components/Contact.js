@@ -8,9 +8,9 @@ export default function Contact() {
   $form.innerHTML = `
   <div class="form-style">
     <legend>Send me your comments</legend>
-    <label for="email">Your Email <input type="email" id="email" name="email" pattern="^\\w+([\.-]?\\w+)*@\\w+(  [\\.-]?\\w+)*(\\.\\w{2,4})+$" title="Insert a valid email" required></label>
+    <label for="email">Your Email <input type="email" id="email" name="email" pattern="^\\w+([\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,4})+$" title="Insert a valid email" required></label>
     <p class="error form none" data-id="email">Insert a valid email</p>
-    <label for="subject">Subject <input type="text" id="subject" name="subject" pattern="  [\\sa-zA-ZáéíóúäëïöüÄËÏÖÜÁÉÍÓÚ]{4,30}" title="The subject only admits letters" required></label>
+    <label for="subject">Subject <input type="text" id="subject" name="subject" pattern="^[0-9a-zA-ZáéíóúäëïöüÄËÏÖÜÁÉÍÓÚ\\s]{1,30}$" title="The subject only admits letters" required></label>
     <p class="error form none" data-id="subject">The subject only admits letters</p>
     <label for="comments">
     Leave me your comments

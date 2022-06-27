@@ -26,10 +26,10 @@ export default function geolocationCard(json, params) {
       </div>
       <div class="card-content">
         <ul>
-          <li>${speed}m/s</li>
-          <li>${pressure}hPa</li>
-          <li>humidity: ${humidity}%</li>
-          <li>Visibility: ${visibility}km</li>
+          <li><b>Wind</b>: ${speed}m/s</li>
+          <li><b>Pressure</b>: ${pressure}hPa</li>
+          <li><b>humidity</b>: ${humidity}%</li>
+          <li><b>Visibility</b>: ${visibility}km</li>
         </ul>
       </div>
     </div>

@@ -34,8 +34,8 @@ export default function CurrentLocation(lat, lon) {
           series: [serie],
         },
         options = {
-          width: 300,
-          height: 200,
+          width: "100%",
+          height: 250,
         };
       timeDay.forEach((el, i) => {
         if (i < 7) {
@@ -51,10 +51,10 @@ export default function CurrentLocation(lat, lon) {
           </div>
           <div class="card-content">
             <ul>
-              <li>${speed}m/s</li>
-              <li>${pressure}hPa</li>
-              <li>humidity: ${humidity}%</li>
-              <li>Visibility: ${visibility}km</li>
+              <li><b>Wind</b>: ${speed}m/s</li>
+              <li><b>pressure</b>: ${pressure}hPa</li>
+              <li><b>humidity</b>: ${humidity}%</li>
+              <li><b>Visibility</b>: ${visibility}km</li>
             </ul>
           </div>
         </div>`;

@@ -4,6 +4,7 @@
   --white-blue-2: #2bc1f0;
   --green-acua: #1cd9d3;
   --green-acua-light: #20f8b4;
+  --roboto: "Montserrat", sans-serif;
 }
 
 @mixin flex {
@@ -33,6 +34,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--roboto);
 }
 
 a {
@@ -130,15 +132,16 @@ textarea {
   }
 }
 
+.card-content {
+  margin-top: 1rem;
+}
+
 .ct-chart {
   @include flex();
+  width: 100%;
 
   .ct-labels {
     font-weight: bold;
-  }
-
-  .ct-grids {
-    color: transparent;
   }
 
   span.ct-vertical::after {
@@ -157,7 +160,7 @@ textarea {
 .ct-series-a .ct-line,
 .ct-series-a .ct-point,
 .ct-series-a .ct-slice-donut {
-  stroke: var(--blue);
+  stroke: rgb(218, 75, 9);
 }
 
 .contact-form {
@@ -165,6 +168,7 @@ textarea {
 }
 
 .description {
+  width: 100%;
   max-width: 600px;
 }
 
@@ -175,7 +179,10 @@ textarea {
   background-color: var(--blue);
   color: #fff;
   * {
+    font-size: 1.25rem;
     margin: 0.5rem;
+    border-radius: 5px;
+    border: none;
   }
 }
 
@@ -183,19 +190,20 @@ textarea {
   @include flex();
   flex-direction: column;
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
   padding: 1rem;
   font-size: 1.25rem;
   border-radius: 10px;
   legend {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--blue);
   }
   * {
     margin-bottom: 0.5rem;
     width: 100%;
+    font-size: 1.25rem;
   }
   *[required] {
     padding: 0.25rem;
@@ -243,22 +251,24 @@ textarea {
 .home-content,
 .description {
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 5px;
   padding: 1.5rem;
+  font-size: 1.5rem;
   h1 {
     margin-bottom: 1rem;
   }
 }
 
 .locations {
-  padding: 2rem;
+  padding: 1rem;
   article {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
+    max-width: 600px;
     min-height: 150px;
     background-color: #fff;
     padding: 1rem;
@@ -308,7 +318,6 @@ textarea {
 .project-description {
   @include flex();
   justify-content: center;
-  padding: 2rem;
 
   h2 {
     margin-bottom: 1.5rem;
@@ -319,9 +328,9 @@ textarea {
   @include flex();
   flex-direction: column;
   justify-content: center;
-  max-width: 350px;
-  margin: 1.5rem;
-  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 1rem;
   grid-column: span 2;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -334,6 +343,17 @@ textarea {
   .form-search {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    font-size: 1.5rem;
+    input {
+      font-size: 1.5rem;
+    }
+  }
+
+  .locations {
+    font-size: 1.25rem;
+    article {
+      height: 175px;
+    }
   }
 
   .page-nav {

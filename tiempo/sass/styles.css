@@ -5,6 +5,7 @@
   --white-blue-2: #2bc1f0;
   --green-acua: #1cd9d3;
   --green-acua-light: #20f8b4;
+  --roboto: "Montserrat", sans-serif;
 }
 
 /* normalice */
@@ -31,6 +32,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: var(--roboto);
 }
 
 a {
@@ -148,6 +150,10 @@ textarea {
   border-radius: 50%;
 }
 
+.card-content {
+  margin-top: 1rem;
+}
+
 .ct-chart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,14 +161,11 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .ct-chart .ct-labels {
   font-weight: bold;
-}
-
-.ct-chart .ct-grids {
-  color: transparent;
 }
 
 .ct-chart span.ct-vertical::after {
@@ -181,7 +184,7 @@ textarea {
 .ct-series-a .ct-line,
 .ct-series-a .ct-point,
 .ct-series-a .ct-slice-donut {
-  stroke: var(--blue);
+  stroke: #da4b09;
 }
 
 .contact-form {
@@ -189,6 +192,7 @@ textarea {
 }
 
 .description {
+  width: 100%;
   max-width: 600px;
 }
 
@@ -208,7 +212,10 @@ textarea {
 }
 
 .form-search * {
+  font-size: 1.25rem;
   margin: 0.5rem;
+  border-radius: 5px;
+  border: none;
 }
 
 .form-style {
@@ -223,7 +230,7 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
   padding: 1rem;
   font-size: 1.25rem;
@@ -231,7 +238,7 @@ textarea {
 }
 
 .form-style legend {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--blue);
 }
@@ -239,6 +246,7 @@ textarea {
 .form-style * {
   margin-bottom: 0.5rem;
   width: 100%;
+  font-size: 1.25rem;
 }
 
 .form-style *[required] {
@@ -295,10 +303,11 @@ textarea {
 .home-content,
 .description {
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 5px;
   padding: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .home-content h1,
@@ -307,7 +316,7 @@ textarea {
 }
 
 .locations {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .locations article {
@@ -321,7 +330,8 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 300px;
+  width: 100%;
+  max-width: 600px;
   min-height: 150px;
   background-color: #fff;
   padding: 1rem;
@@ -393,7 +403,6 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem;
 }
 
 .project-description h2 {
@@ -414,9 +423,9 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 350px;
-  margin: 1.5rem;
-  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 1rem;
   grid-column: span 2;
   border-radius: 5px;
   background-color: white;
@@ -435,6 +444,16 @@ textarea {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    font-size: 1.5rem;
+  }
+  .form-search input {
+    font-size: 1.5rem;
+  }
+  .locations {
+    font-size: 1.25rem;
+  }
+  .locations article {
+    height: 175px;
   }
   .page-nav {
     position: static;
