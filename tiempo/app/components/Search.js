@@ -86,8 +86,8 @@ export default function Search() {
               series: [serie],
             },
             options = {
-              width: 300,
-              height: 200,
+              width: "100%",
+              height: 250,
             };
           timeDay.forEach((el, i) => {
             if (i < 7) {
