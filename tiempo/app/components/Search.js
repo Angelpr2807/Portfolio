@@ -3,6 +3,7 @@ import ow_api from "../helpers/ow_api.js";
 import locationCard from "./locationCard.js";
 import Chart from "./Chart.js";
 import geolocationCard from "./Geolocation.js";
+import ErrorLocationCard from "./ErrorLocationCard.js";
 
 export default function Search() {
   const $root = document.querySelector(".root"),
@@ -52,6 +53,12 @@ export default function Search() {
         method: "GET",
         success: (json) => {
           $searchSection.innerHTML = "";
+          if (json.length === 0) {
+            $searchSection.innerHTML = `
+            <div class="weather">
+              ${ErrorLocationCard()}
+            </div>`;
+          }
           json.forEach((el) => {
             locationCard(el);
           });

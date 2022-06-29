@@ -16,13 +16,7 @@ let locate,
   lon,
   { id, limit } = api;
 
-const $root = document.querySelector(".root"),
-  GEO_NAME = `http://api.openweathermap.org/geo/1.0/direct?q=${locate}&limit=${limit}&appid=${id}`,
-  INV_GEO_NAME = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${id}`,
-  //basic information
-  LOCATION = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${id}`,
-  //use list of weather 7 of 7 in a day
-  WEATHER = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${id}`;
+const $root = document.querySelector(".root");
 
 export default function Router() {
   let { hash } = location;

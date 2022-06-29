@@ -42,8 +42,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
           sign = "/";
           // number1 = 0;
           break;
-        case "*":
-          sign = "*";
+        case "x":
+          sign = "x";
           // number1 = 0;
           break;
         case "reset":
@@ -71,7 +71,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
               $input.value = calc;
 
               break;
-            case "*":
+            case "x":
               calc = number2 * number1;
               $input.value = calc;
 
