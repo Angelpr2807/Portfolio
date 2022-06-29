@@ -7,6 +7,8 @@ let number = "",
   number1 = 0,
   number2;
 
+$point = d.querySelector('[data-value="."]');
+
 d.addEventListener("DOMContentLoaded", (e) => {
   d.addEventListener("click", (e) => {
     if (e.target.matches(`.keyboard button.digit`)) {
@@ -26,10 +28,13 @@ d.addEventListener("DOMContentLoaded", (e) => {
         number = array.join("");
         return;
       }
+
+      $point.disabled = false;
       number2 = number1;
       number1 = parseFloat($input.value);
       number = "";
       $input.value = "";
+
       switch (e.target.dataset.value) {
         case "+":
           sign = "+";
