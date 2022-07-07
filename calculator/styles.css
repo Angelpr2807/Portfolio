@@ -111,7 +111,7 @@ label {
   color: var(--white-text);
 }
 
-input[type=number] {
+input[type="number"] {
   text-align: right;
   width: 100%;
   font-size: 1.5rem;
@@ -119,7 +119,7 @@ input[type=number] {
   border: none;
   color: var(--white-text);
 }
-input[type=number]:focus {
+input[type="number"]:focus {
   border-radius: 10px;
   outline: thin solid var(--white-text);
 }
@@ -161,20 +161,42 @@ input[type=number]:focus {
 }
 
 /*----------themes--------------------*/
-header.theme-2 {
-  color: var(--gray-text);
-}
-
 body.theme-2 {
   background-color: var(--main-bgc-2);
 }
 
-.results.theme-2 {
-  background-color: var(--third-bgc-2);
+body.theme-3 {
+  background-color: var(--main-bgc-3);
 }
-.results.theme-2 input {
-  color: var(--gray-text-2);
-  background-color: inherit;
+
+header.theme-2 {
+  color: var(--gray-text);
+}
+
+header.theme-3 {
+  color: var(--lightyellow);
+}
+
+footer {
+  max-width: 600px;
+  width: 95%;
+  padding: 0.5rem;
+  margin: 1rem auto 0;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--white-text);
+}
+
+footer.theme-2 {
+  color: var(--gray-text);
+}
+
+footer a {
+  color: var(--cyan);
+}
+
+footer a:visited {
+  color: var(--darkblue);
 }
 
 .keyboard.theme-2 {
@@ -191,22 +213,6 @@ body.theme-2 {
 .keyboard.theme-2 button:nth-child(18) {
   background-color: var(--orange);
   box-shadow: 2px 5px var(--darkorange);
-}
-
-header.theme-3 {
-  color: var(--lightyellow);
-}
-
-body.theme-3 {
-  background-color: var(--main-bgc-3);
-}
-
-.results.theme-3 {
-  background-color: var(--second-bgc-3);
-}
-.results.theme-3 input {
-  color: var(--lightyellow);
-  background-color: inherit;
 }
 
 .keyboard.theme-3 {
@@ -231,4 +237,18 @@ body.theme-3 {
   box-shadow: 2px 5px var(--cyan-3);
 }
 
-/*# sourceMappingURL=styles.css.map */
+.results.theme-2 {
+  background-color: var(--third-bgc-2);
+}
+.results.theme-2 input {
+  color: var(--gray-text-2);
+  background-color: inherit;
+}
+
+.results.theme-3 {
+  background-color: var(--second-bgc-3);
+}
+.results.theme-3 input {
+  color: var(--lightyellow);
+  background-color: inherit;
+}

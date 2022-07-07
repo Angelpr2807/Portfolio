@@ -5,7 +5,33 @@ let number = "",
   sign,
   calc = 0,
   number1 = 0,
-  number2;
+  number2 = "";
+
+const Calculate = (sign) => {
+  switch (sign) {
+    case "+":
+      calc = number2 + number1;
+      number1 = calc;
+      $input.value = calc;
+      break;
+    case "-":
+      calc = number2 - number1;
+      $input.value = calc;
+
+      break;
+    case "/":
+      calc = number2 / number1;
+      $input.value = calc;
+
+      break;
+    case "x":
+      calc = number2 * number1;
+      $input.value = calc;
+
+      break;
+  }
+  number1 = calc;
+};
 
 $point = d.querySelector('[data-value="."]');
 
@@ -27,6 +53,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
         $input.value = array.join("");
         number = array.join("");
         return;
+      } else if (!$input.value) {
+        $input.value = 0;
       }
 
       $point.disabled = false;
@@ -35,21 +63,21 @@ d.addEventListener("DOMContentLoaded", (e) => {
       number = "";
       $input.value = "";
 
+      if (sign) {
+        Calculate(sign);
+      }
       switch (e.target.dataset.value) {
         case "+":
           sign = "+";
           break;
         case "-":
           sign = "-";
-          // number1 = 0;
           break;
         case "/":
           sign = "/";
-          // number1 = 0;
           break;
         case "x":
           sign = "x";
-          // number1 = 0;
           break;
         case "reset":
           number1 = 0;
@@ -57,49 +85,30 @@ d.addEventListener("DOMContentLoaded", (e) => {
           number = "";
           break;
         case "same":
-          if (number2 === 0) {
+          if (number2 === "") {
             alert("no ingresó el segundo número");
             return;
           }
-          switch (sign) {
-            case "+":
-              calc = number2 + number1;
-              $input.value = calc;
-              break;
-            case "-":
-              calc = number2 - number1;
-              $input.value = calc;
-
-              break;
-            case "/":
-              calc = number2 / number1;
-              $input.value = calc;
-
-              break;
-            case "x":
-              calc = number2 * number1;
-              $input.value = calc;
-
-              break;
-          }
+          $input.value = calc || number1;
           break;
       }
     }
 
     if (e.target.matches("header input")) {
-      console.log(typeof e.target.id);
       switch (e.target.id) {
         case "1":
           d.querySelector("body").classList.remove("theme-2", "theme-3");
           d.querySelector(".results").classList.remove("theme-2", "theme-3");
           d.querySelector(".keyboard").classList.remove("theme-2", "theme-3");
           d.querySelector("header").classList.remove("theme-2", "theme-3");
+          d.querySelector("footer").classList.remove("theme-2");
           break;
         case "2":
           d.querySelector("header").classList.add("theme-2");
           d.querySelector("body").classList.add("theme-2");
           d.querySelector(".results").classList.add("theme-2");
           d.querySelector(".keyboard").classList.add("theme-2");
+          d.querySelector("footer").classList.add("theme-2");
           d.querySelector("header").classList.remove("theme-3");
           d.querySelector("body").classList.remove("theme-3");
           d.querySelector(".results").classList.remove("theme-3");
@@ -110,6 +119,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
           d.querySelector("body").classList.add("theme-3");
           d.querySelector(".results").classList.add("theme-3");
           d.querySelector(".keyboard").classList.add("theme-3");
+          d.querySelector("footer").classList.remove("theme-2");
           break;
       }
     }

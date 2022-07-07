@@ -41,7 +41,12 @@ a {
 }
 
 a:hover {
+  font-weight: bold;
   text-decoration: underline;
+}
+
+a:visited {
+  color: #da4b09;
 }
 
 button {
@@ -265,6 +270,13 @@ textarea {
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 0.5rem;
+}
+
+footer {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bold;
   padding: 0.5rem;
 }
 
