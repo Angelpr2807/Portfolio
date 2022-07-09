@@ -1,5 +1,5 @@
 :root {
-  --main-color: #8d24f0;
+  --main-color: #913ae2;
   --second-color: #1957fc;
 }
 
@@ -52,6 +52,7 @@ img {
   margin: 1rem auto 0;
   padding: 1rem;
   background-color: #fff;
+  border-radius: 10px;
 
   * {
     margin: 0.25rem;
@@ -83,6 +84,9 @@ img {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }
 

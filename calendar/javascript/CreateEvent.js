@@ -8,13 +8,10 @@ export default function Event() {
   let id = localStorage.getItem("id"),
     $main = document.getElementById("main");
 
-  let variable = Object.keys(localStorage);
-
   for (let i = 0; i < id - 1; i++) {
     let datos = localStorage.getItem(`eventInfo_${i + 1}`);
     datos = datos.split(",");
     if (datos) {
-      console.log(datos);
       $main.appendChild(
         EventCard({
           id: i + 1,

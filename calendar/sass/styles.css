@@ -5,8 +5,7 @@
 html {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -14,8 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -27,8 +25,7 @@ body {
 *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: var(--epilogue);
 }
 
@@ -47,37 +44,24 @@ img {
 
 /* site styles */
 .calendar-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   min-width: 280px;
   width: 40vw;
   margin: 1rem auto;
   background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 0;
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   width: 80%;
   margin: 1rem 0;
 }
-
 form * {
   width: 100%;
   margin-top: 1rem;
@@ -86,9 +70,8 @@ form * {
   border-radius: 5px;
   padding: 0.5rem;
 }
-
-form input[type="submit"] {
-  background-color: #5073e6;
+form input[type=submit] {
+  background-color: rgb(80, 115, 230);
   color: #fff;
 }
 
@@ -99,37 +82,32 @@ main {
   margin: 0 auto;
   padding: 1rem;
   background-color: #fff;
+  border-radius: 10px;
 }
 
 .event-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: #fff;
   border: thin solid #000;
   border-radius: 5px;
 }
-
 .event-card button {
   font-size: 1rem;
-  background-color: #fa2323;
+  background-color: rgb(250, 35, 35);
   color: #fff;
   border: none;
   padding: 0.5rem;
   border-radius: 5px;
 }
-
 .event-card p span:first-child {
   display: block;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+/*# sourceMappingURL=styles.css.map */
