@@ -1,0 +1,352 @@
+:root {
+  --main-color: #362d27;
+  --second-color: #2a2420;
+  --third-color: #d9b24f;
+  --black: #333;
+  --black-v2: rgba(17, 17, 17, 0.781);
+  --white-v2: rgba(255, 255, 255, 0.212);
+  --righteous: "Righteous", cursive;
+  --open-sans: "Open Sans", sans-serif;
+  --step--3: clamp(0.9rem, calc(0.5rem + 0.9vw), 1rem);
+  --step--2: clamp(0.75rem, calc(0.74rem + 0.7vw), 1.25rem);
+  --step--1: clamp(0.94rem, calc(0.71rem + 1.15vw), 1.6rem);
+  --step-0: clamp(1.5rem, calc(0.65rem + 1.74vw), 1.75rem);
+  --step-1: clamp(1.07rem, calc(0.57rem + 2.49vw), 2rem);
+  --step-2: clamp(1.5rem, calc(0.45rem + 3.45vw), 2.25rem);
+  --step-3: clamp(1.22rem, calc(0.28rem + 4.68vw), 3.91rem);
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--open-sans);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--righteous);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--righteous);
+}
+
+/*----------- syte styles ----------*/
+
+main {
+  @include flex();
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black);
+  padding: 2rem 0;
+  h1 {
+    color: var(--third-color);
+  }
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  height: 400px;
+  @include flex();
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  label {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    & > * {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+  input[type="submit"] {
+    width: 100px;
+    font-weight: bold;
+    font-size: var(--step--1);
+    border: none;
+    border-radius: 25px;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    cursor: pointer;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/*--------------------------- panel de administrador---------------------------------*/
+
+.main {
+  .products {
+    width: 80%;
+  }
+  .searcher {
+    @include flex();
+    justify-content: center;
+  }
+  input {
+    width: 75%;
+    max-width: 300px;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    border: none;
+  }
+  .add-prod {
+    width: 100%;
+    @include flex();
+    justify-content: center;
+  }
+  .add-product {
+    color: var(--main-color);
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  .loader,
+  .no-products {
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.product-card {
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  color: #fff;
+  background-color: var(--main-color);
+  * {
+    margin-bottom: 1rem;
+  }
+  div {
+    padding: 0 0.75rem;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: var(--third-color);
+  }
+  p {
+    @include flex();
+    justify-content: space-between;
+    width: 80%;
+    span {
+      @include flex();
+      margin: 0;
+    }
+  }
+  .modify {
+    width: 100%;
+    background-color: var(--third-color);
+    color: #333;
+    font-size: var(--step--2);
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    margin: 1rem 0 0;
+  }
+}
+
+.modal {
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black-v2);
+  padding: 1.5rem 0.5rem;
+  &.is-active {
+    display: block;
+  }
+  .modal-content {
+    position: relative;
+    width: 95%;
+    height: 92.5vh;
+    max-width: 600px;
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #fff;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .close {
+    position: absolute;
+    top: -12.5px;
+    right: -12.5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    span {
+      color: rgb(182, 19, 19);
+    }
+  }
+}
+
+.modal-content {
+  h2 {
+    color: var(--third-color);
+    margin-bottom: 2rem;
+  }
+  label {
+    @include flex();
+    flex-direction: column;
+    padding: 1rem 0.25rem;
+    color: #fff;
+    input {
+      width: 100%;
+    }
+  }
+  hr {
+    height: 1.25px;
+    border: none;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(194, 194, 194) 50%,
+      transparent 100%
+    );
+  }
+  .title {
+    text-align: center;
+  }
+  .img {
+    @include flex();
+    flex-direction: column;
+    * {
+      margin: 0.75rem;
+    }
+    input {
+      color: var(--main-color);
+      background-color: var(--third-color);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  .brand {
+    margin: 1rem 0;
+    text-align: center;
+    p {
+      color: var(--third-color);
+      margin-bottom: 1rem;
+    }
+  }
+  .desc {
+    padding: 1rem;
+    text-align: center;
+    color: var(--third-color);
+    textarea {
+      margin-top: 1rem;
+      width: 80%;
+      resize: none;
+      border-radius: 10px;
+    }
+  }
+  .price,
+  .stock {
+    text-align: center;
+    padding: 1rem 0.25rem;
+    color: var(--third-color);
+  }
+  .send {
+    @include flex();
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    button {
+      color: var(--main-color);
+      padding: 0.25rem 0.5rem;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: var(--third-color);
+    }
+  }
+  .delete {
+    @include flex();
+    justify-content: center;
+    button {
+      color: #fff;
+      padding: 0.25rem 0.5rem;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      background-color: rgb(156, 18, 18);
+    }
+  }
+}

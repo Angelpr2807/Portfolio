@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/icono1.png" type="image/x-icon">
+  <!-- hamburger -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Righteous&display=swap"
+    rel="stylesheet">
+  <!-- icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- letter fonts -->
+  <!-- site styles -->
+  <link rel="stylesheet" href="./sass/styles.css">
+  <title>Fake Shop</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#"><img src="./assets/second-logo.png" alt="logo"></a>
+    <nav class="main-nav">
+      <div class="nav-links">
+        <h2>Fake Coffee</h2>
+        <a href="#home" rel="noopener noreferrer"><span class="material-symbols-outlined">
+            home
+          </span>Home</a>
+        <a href="#conocenos" rel="noopener noreferrer"><span class="material-symbols-outlined">
+            restaurant
+          </span>Conócenos</a>
+        <a href="#productos" rel="noopener noreferrer"><span class="material-symbols-outlined">
+            coffee
+          </span>Productos</a>
+        <a href="#contactanos" rel="noopener noreferrer"><span class="material-symbols-outlined">
+            call
+          </span>Contáctanos</a>
+      </div>
+    </nav>
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <button class="shop">
+      <span class="length"></span>
+      <img src="./assets/cart.svg" alt="carrito">
+    </button>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="hero-img" style="background-image: url('./assets/hero-1.jpg');">
+        <div class="hero-content">
+          <div>
+            <img src="./assets/main-logo.png" alt="logo principal">
+            <h1>Café</h1>
+            <p>Establecimiento especializado en la venta de café, jugos de frutas, gaseosas, bocadillos sándwiches,
+              ensaladas, panes, galletas, entre otros.</p>
+          </div>
+        </div>
+      </div>
+      <button class="admin">Administrador</button>
+    </section>
+    <section id="conocenos">
+      <h2>Conocenos</h2>
+      <p>Hace más de 20 años venimos ofreciendo café en el centro de la ciudad Huancayo, nuestro arduo trabajo no dió el
+        prestigio que tenemos actualmente, pero trabajamos constantemente para ofrecer el mejor servicio a nuetros
+        comensales y los invitamos cordialmente a nuestro local ubicado en Jr. Amazonas N°25 a vivir la experiancia
+        cafetera en la "Ciudad Incontrastable"</p>
+      <div class="hero-img"
+        style="background-image: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(51,51,51,1) 40%, rgba(20,20,20,1) 100%);">
+        <div class="bg-carrousel">
+          <div class="carrousel">
+            <div class="slides">
+              <article class="about-us">
+                <h3>Cafetería</h3>
+                <img src="./assets/icono2.png" alt="taza de café">
+                <p>Somos una cafetería ubicada en el centro de Huancayo, nos encanta ofrecer el mejor servicio a
+                  nuestros
+                  comensales y satisfacer su paladar con los mejóres cafes y bocadillos de toda la ciudad.</p>
+              </article>
+              <article class="about-us">
+                <h3>Horarios</h3>
+                <img src="./assets/icono1.png" alt="taza de café">
+                <ul>
+                  <li>lunes a viernes: 10:00 AM - 09:00 PM</li>
+                  <li>Sabado y Domingo: 12:00 PM - 09:00 PM</li>
+                </ul>
+              </article>
+              <article class="about-us">
+                <h3>Productos 100% naturales</h3>
+                <img src="./assets/icono3.png" alt="taza de café">
+                <p>Nos gusta traerte el mejor café y por ello adquirimos nuestros productos a nuestros agricultores
+                  peruanos.
+                  De la selva peruana a tu meza, nos gusta el sabor exquisito del café natural y compartimos este gusto
+                  con
+                  nuestros clientes.</p>
+              </article>
+            </div>
+          </div>
+          <button class="left reverse"><span class="material-symbols-outlined">
+              arrow_forward_ios
+            </span></button>
+          <button class="right"><span class="material-symbols-outlined">
+              arrow_forward_ios
+            </span></button>
+        </div>
+      </div>
+    </section>
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="grid-products">
+      </div>
+
+
+      <div class="modal none">
+      </div>
+
+      <div class="cart none">
+        <div class="cart-content" data-total="0">
+          <div class="close"><span class="material-symbols-outlined">
+              close
+            </span></div>
+          <h2>Total a pagar $<span class="total">0</span></h2>
+        </div>
+        <button class="pay">Finalizar compra</button>
+      </div>
+
+    </section>
+  </main>
+  <footer id="contactanos">
+    <div class="hero-img" style="background-image: url('./assets/hero-1.jpg')">
+      <div class="footer">
+        <img src="./assets/second-logo.png" alt="logo">
+        <div class="contacto">
+          <h3>contáctanos</h3>
+          <a href="https://api.whatsapp.com/send?phone=999999999">whatsapp</a>
+        </div>
+        <div class="social-media">
+          <h3>Redes sociales</h3>
+          <a href="https://www.facebook.com/#" target="_blank" rel="noopener noreferrer"><img
+              src="./assets/Facebook.svg" alt="facebook">Facebook</a>
+          <a href="https://www.instagram.com/#" target="_blank" rel="noopener noreferrer"><img
+              src="./assets/Instagram.svg" alt="instagram">Instagram</a>
+        </div>
+        <div class="cr">
+          <p>© 2022, Fake Coffe
+            https://fake-coffe.com
+          </p>
+          <div class="payment">
+            <img src="./assets/paypal.svg" alt="paypal">
+            <img src="./assets/masterCard.svg" alt="master card">
+            <img src="./assets/visa.svg" alt="visa">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top"><span class="material-symbols-outlined">
+      expand_less
+    </span></button>
+  <script src="./javascript/index.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "url": "./assets/products/coffee1.jpg",
+      "description": "Café con leche descremada",
+      "title": "Café con Leche",
+      "brand": "Marca nesca",
+      "price": [45, 7.5],
+      "stock": [25, 30]
+    },
+    {
+      "id": 2,
+      "url": "./assets/products/coffee2.jpg",
+      "description": "Café con con cremade leche",
+      "title": "Café Irlandés",
+      "brand": "Marca Geagle",
+      "price": [60, 10],
+      "stock": [25, 30]
+    },
+    {
+      "id": 3,
+      "url": "./assets/products/coffee3.jpg",
+      "description": "Café ligero",
+      "title": "Café Americano",
+      "brand": "Marca cristalia",
+      "price": [90, 15],
+      "stock": [25, 30]
+    },
+    {
+      "id": 4,
+      "url": "./assets/products/coffee4.jpg",
+      "description": "Café doble",
+      "title": "Café Doppio",
+      "brand": "Marca Antonio do Amparo",
+      "price": [66, 11],
+      "stock": [25, 30]
+    },
+    {
+      "id": 5,
+      "url": "./assets/products/coffee5.jpg",
+      "description": "Café cargado",
+      "title": "Espresso",
+      "brand": "Lavazza",
+      "price": [72, 12],
+      "stock": [25, 30]
+    }
+  ]
+}
